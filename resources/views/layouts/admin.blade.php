@@ -130,10 +130,10 @@
                 </a>
                 
                 <!-- Logout -->
-                <a href="/admin/login" class="flex items-center px-4 py-2.5 text-gray-300 font-medium hover:bg-white hover:bg-opacity-5 rounded-lg transition">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                    Logout
-                </a>
+            <a href="/admin/login" onclick="localStorage.clear();" class="flex items-center px-4 py-2.5 text-gray-300 font-medium hover:bg-white hover:bg-opacity-5 rounded-lg text-sm transition">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                Logout
+            </a>
             </nav>
 
             <!-- Sidebar Footer -->
@@ -149,5 +149,11 @@
             @yield('content')
         </main>
     </div>
+    <script>
+    // Kung hindi naka-login o hindi admin ang role, ibalik sa login page
+    if (localStorage.getItem('bp_logged_in') !== 'true' || localStorage.getItem('bp_role') !== 'admin') {
+        window.location.href = '/admin/login';
+    }
+</script>
 </body>
 </html>

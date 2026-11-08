@@ -68,7 +68,7 @@
                 <h2 class="text-3xl font-bold text-brand-navy mb-2">Resident Login</h2>
                 <p class="text-gray-500 text-sm mb-8">Please sign in to access your dashboard.</p>
                 
-                <form action="/resident/dashboard" method="GET" class="space-y-5">
+                <form id="loginForm" class="space-y-4">
                     <!-- Email Input -->
                     <div>
                         <label for="email" class="block text-sm font-bold text-brand-navy mb-2">Email Address</label>
@@ -112,13 +112,8 @@
                     </div>
                     
                     <!-- Login Button -->
-                    <button 
-                        type="submit" 
-                        class="w-full flex justify-center items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-white font-bold py-3.5 rounded-lg transition-all duration-200 shadow-sm mt-4"
-                    >
-                        Login <span class="text-lg leading-none">&rarr;</span>
-                    </button>
-                </form>
+<button type="submit" class="w-full bg-brand-teal text-white font-bold py-3 rounded-xl text-xs">Login</button>
+</form>
                 
             <div class="text-center mt-6">
     <a href="/admin/login" class="text-sm font-medium text-gray-500 hover:text-brand-navy transition-colors">Sign in as Admin</a>
@@ -138,5 +133,16 @@
         </div>
         
     </main>
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // I-save ang mock session sa localStorage
+        localStorage.setItem('bp_role', 'resident');
+        localStorage.setItem('bp_logged_in', 'true');
+        
+        // Redirect sa Resident Dashboard
+        window.location.href = '/resident/dashboard';
+    });
+</script>
 </body>
 </html>

@@ -12,7 +12,7 @@
         <!-- Profile Card -->
         <div class="bg-surface-card p-6 rounded-2xl border border-gray-100 shadow-sm text-center space-y-4">
             <div class="relative w-28 h-28 mx-auto">
-                <div class="w-full h-full rounded-full bg-gray-200 bg-cover bg-center border-4 border-teal-50 shadow-inner" style="background-image: url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200')"></div>
+                <div class="w-full h-full rounded-full bg-gray-200 bg-cover bg-center border-4 border-teal-50 shadow-inner" style="background-image: url('{{ asset('images/fbprof.jpg') }}')"></div>
                 <span class="absolute bottom-0 right-0 w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center text-xs shadow-md border-2 border-white cursor-pointer">📷</span>
             </div>
             <div>

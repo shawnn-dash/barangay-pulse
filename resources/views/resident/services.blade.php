@@ -15,11 +15,11 @@
         <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition">📄</div>
         <p class="text-sm font-bold text-gray-800">Certificate of Indigency</p>
     </a>
-    <a href="#" class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-teal-300 transition flex flex-col items-center justify-center text-center group">
+    <a href="/resident/health-appointment" class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-teal-300 transition flex flex-col items-center justify-center text-center group">
         <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition">⚕️</div>
         <p class="text-sm font-bold text-gray-800">Health Appointment</p>
     </a>
-    <a href="#" class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-teal-300 transition flex flex-col items-center justify-center text-center group">
+    <a href="/resident/blotter-submit" class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-teal-300 transition flex flex-col items-center justify-center text-center group">
         <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition">⚖️</div>
         <p class="text-sm font-bold text-gray-800">Blotter Submission</p>
     </a>

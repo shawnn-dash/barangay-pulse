@@ -52,6 +52,19 @@ Route::prefix('resident')->group(function () {
         return view('resident.request-indigency'); 
     });
 
+    Route::get('/indigency-confirmation', function () { 
+        return view('resident.indigency-confirmation'); 
+    });
+    // Incident Blotter Submission Screen
+    Route::get('/blotter-submit', function () { 
+        return view('resident.blotter-submit'); 
+    });
+
+    // Health Center Appointment Page
+    Route::get('/health-appointment', function () { 
+        return view('resident.health-appointment'); 
+    });
+
     // 3. Barangay Activities
     Route::get('/activities', function () { 
         return view('resident.activities'); 

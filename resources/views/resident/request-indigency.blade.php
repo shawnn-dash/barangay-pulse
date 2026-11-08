@@ -24,8 +24,7 @@
 
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-        <form action="#" method="POST" class="space-y-6">
-            @csrf
+        <div class="space-y-6">
             <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 mb-6 flex justify-between items-center">
                 <div>
                     <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Resident Name</p>
@@ -40,14 +39,14 @@
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <label class="block text-sm font-bold text-gray-700 mb-2">Purpose</label>
-                    <select class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 bg-gray-50 p-3 outline-none">
+                    <select name="purpose" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 bg-gray-50 p-3 outline-none">
                         <option>Scholarship</option>
                         <option>Medical Assistance</option>
                     </select>
                 </div>
                 <div>
                     <label class="block text-sm font-bold text-gray-700 mb-2">Receiving Institution</label>
-                    <input type="text" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 bg-gray-50 p-3 outline-none" placeholder="e.g. CHED, DSWD">
+                    <input type="text" name="institution" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 bg-gray-50 p-3 outline-none" placeholder="e.g. CHED, DSWD">
                 </div>
             </div>
 
@@ -67,10 +66,13 @@
             </div>
 
             <div class="pt-4 flex justify-between items-center border-t border-gray-100 mt-6">
-                <button type="button" class="text-gray-500 font-bold hover:text-gray-700">Cancel</button>
-                <button type="button" class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl font-bold shadow-sm transition">Next: Review Details &rarr;</button>
+                <a href="/resident/services" class="text-gray-500 font-bold hover:text-gray-700 text-sm">Cancel</a>
+                <!-- Ginawa nating link para sure na mapupunta sa confirmation page -->
+                <a href="/resident/indigency-confirmation" class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl font-bold shadow-sm transition text-center inline-block">
+                    Next: Confirmation &rarr;
+                </a>
             </div>
-        </form>
+        </div>
     </div>
 
     <div class="space-y-6">

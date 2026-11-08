@@ -13,7 +13,7 @@
             <p class="text-xs text-gray-300">Manage your personal information, security preferences, and view your recent system activities.</p>
         </div>
         <div class="mt-4 md:mt-0 flex items-center gap-4">
-            <div class="w-16 h-16 rounded-full bg-brand-teal bg-cover bg-center border-2 border-white" style="background-image: url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200')"></div>
+            <div class="w-16 h-16 rounded-full bg-brand-teal bg-cover bg-center border-2 border-white" style="background-image: url('{{ asset('images/fbprof.jpg') }}')"></div>
             <div>
                 <p class="text-[10px] text-gray-400">Last Login:</p>
                 <p class="text-xs font-bold text-white">Today, 8:45 AM</p>

@@ -63,7 +63,7 @@
                 <h2 class="text-3xl font-bold text-brand-navy mb-2">Admin Login</h2>
                 <p class="text-gray-500 text-sm mb-8">Please sign in to access the admin panel.</p>
                 
-                <form action="/admin/dashboard" method="GET" class="space-y-5">
+                <form id="adminLoginForm" class="space-y-4">
                     <div>
                         <label for="email" class="block text-sm font-bold text-brand-navy mb-2">Email Address</label>
                         <input type="email" id="email" name="email" value="adogong@ssct.edu.ph" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-800 focus:bg-white focus:ring-2 focus:ring-brand-teal focus:border-transparent transition-all outline-none" required>
@@ -82,11 +82,8 @@
                         <a href="#" class="text-sm text-brand-teal font-bold hover:text-brand-tealHover transition-colors">Forgot Password?</a>
                     </div>
                     
-                    <button type="submit" class="w-full flex justify-center items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-white font-bold py-3.5 rounded-lg transition-all duration-200 shadow-sm mt-4">
-                        Login <span class="text-lg leading-none">&rarr;</span>
-                    </button>
-                </form>
-                
+            <button type="submit" class="w-full bg-brand-teal text-white font-bold py-3 rounded-xl text-xs">Login</button>
+            </form>
                 <div class="text-center mt-6">
                     <a href="/" class="text-sm font-medium text-gray-500 hover:text-brand-navy transition-colors">Sign in as Resident</a>
                 </div>
@@ -105,5 +102,16 @@
         </div>
         
     </main>
+    <script>
+    document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // I-save ang mock session bilang admin
+        localStorage.setItem('bp_role', 'admin');
+        localStorage.setItem('bp_logged_in', 'true');
+        
+        // Redirect sa Admin Dashboard
+        window.location.href = '/admin/dashboard';
+    });
+</script>
 </body>
 </html>
